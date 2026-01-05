@@ -1,10 +1,4 @@
-# ConvFormer-Lite (PyTorch)
-
-Lightweight ConvFormer-style network:
-- Convolutional stem
-- ConvMixer blocks for local mixing
-- SafeMHSA2D blocks for global mixing under a token budget
-- Global average pooling + linear classifier
+# CFL Net (PyTorch)
 
 ## Install
 ```bash
