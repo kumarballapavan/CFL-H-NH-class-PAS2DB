@@ -1,0 +1,24 @@
+data:
+  train_dir: "data/train"
+  val_dir: "data/val"
+  img_size: 224
+  batch_size: 32
+  num_workers: 4
+
+model:
+  num_classes: 2
+  widths: [48, 96, 192]
+  depths: [2, 3, 2]           # ConvMixer blocks per stage
+  attn_every: 2               # insert attention every N conv blocks (per stage)
+  token_budget: 256           # max tokens for attention (safety)
+  num_heads: 4
+  dropout: 0.0
+
+train:
+  epochs: 30
+  lr: 0.001
+  weight_decay: 0.05
+  label_smoothing: 0.0
+  amp: true
+  seed: 42
+  save_dir: "checkpoints"
